@@ -1,0 +1,4 @@
+const appName = 'Wilderness Adventures Hub';
+const baseUrl = 'http://localhost:8080';
+const whatis = "Wilderness Adventures Hub is a comprehensive online platform designed to be your one-stop destination for planning and organizing unforgettable wilderness adventures. Whether you're seeking thrilling safaris, comfortable accommodations, exciting activities, or delicious cuisine, Wilderness Adventures Hub has you covered. Our platform allows you to browse and book safaris, explore various room options, discover exciting activities, and indulge in mouthwatering food offerings. With a user-friendly interface and a wide range of options, we aim to make your wilderness adventure planning experience seamless and enjoyable. Get ready to embark on your next wild journey with Wilderness Adventures Hub!"
+export default { appName, baseUrl,whatis };
