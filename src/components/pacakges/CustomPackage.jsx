@@ -132,30 +132,43 @@ const CustomPackage = () => {
                 <label style={styles.label}>
                     Activities
                 </label>
-                {
-                    activities.map((activity, index) =>
-                        <label
-                            style={{ color: "white", fontSize: 16 }}
-                        >
-                            <input
-                                key={index}
-                                type="checkbox"
-                                name="activity"
-                                value={selectedActivities.includes(activity.name)}
-                                onChange={(e) => {
-                                    if (selectedActivities.includes(activity.name)) {
-                                        var index = selectedActivities.find((act) => act === activity.name)
-                                        if (index !== -1) {
-                                            selectedActivities.splice(index, 1)
+                <div
+                    style={{
+                        display: "flex",
+                        alignItems: "start",
+                        justifyContent: "start",
+                        alignSelf: "flex-start"
+                    }}
+                >
+                  {
+                        activities.map((activity, index) =>
+                            <label
+                                style={{ color: "white", fontSize: 16,margin : "0 16px" }}
+                            >
+                                {`${activity.name} : `}
+                                <input
+                                    style={{
+                                        marginLeft: "8px"
+                                    }}
+                                    key={index}
+                                    type="checkbox"
+                                    name="activity"
+                                    value={selectedActivities.includes(activity.name)}
+                                    onChange={(e) => {
+                                        if (selectedActivities.includes(activity.name)) {
+                                            var index = selectedActivities.find((act) => act === activity.name)
+                                            if (index !== -1) {
+                                                selectedActivities.splice(index, 1)
+                                            }
+                                        } else {
+                                            selectedActivities.push(activity.name)
                                         }
-                                    } else {
-                                        selectedActivities.push(activity.name)
-                                    }
-                                }}
-                            />
-
-                        </label>)
-                }
+                                    }}
+                                />
+                            </label>
+                        )
+                    }
+                </div>
                 <label style={styles.label}>
                     Foods
                 </label>
