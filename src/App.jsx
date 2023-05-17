@@ -68,11 +68,11 @@ const App = () => {
         <Navbar />
         <Header />
       </div>
-      <Brand />
+   
       <WhatGPT3 />
-      <Features />
+     
       <Possibility />
-      <CTA />
+    
       <Blog data={safaris} title1={"Explore Majestic "} title2={"Safaris"} id={"safaris"}/>
       <Blog data={rooms} title1={"Discover Serene "} title2={"Accommodations"} id={"rooms"}/>
       <Blog data={activities} title1={"Embark on Thrilling"} title2={"Adventures"}id={"activities"} />

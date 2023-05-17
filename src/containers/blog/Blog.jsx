@@ -19,6 +19,7 @@ const Blog = ({ data, title1, title2,id }) => (
           }).map((post, index) => {
             return <Article
               post={post}
+              text = {post.description}
               imgUrl={post.image ?? "https://www.shutterstock.com/shutterstock/videos/1089782287/thumb/4.jpg?ip=x480"}
               date={post.name}
               key={index} />
