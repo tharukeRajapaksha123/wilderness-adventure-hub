@@ -44,7 +44,8 @@ const CustomPackage = () => {
         const data = {
             name, email, selectedActivities, selectedFoods, selectedRooms, selectedSafaris
         }
-        await axios.get(`${config.baseUrl}/book-controller`, data).then((val) => {
+     
+        await axios.post(`${config.baseUrl}/book-controller`, data).then((val) => {
             alert("Your pacakge created");
             setEmail("")
             setName("")
