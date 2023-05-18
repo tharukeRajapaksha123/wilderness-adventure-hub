@@ -54,6 +54,7 @@ const App = () => {
     fetchActivities();
     fetchRooms();
     fetchFoods();
+ 
   }, [])
 
 

@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './article.css';
 
-const Article = ({ imgUrl, date, text, post, price, description }) => (
+const Article = ({ imgUrl, date, text,  price, d }) => {
 
-  <div className="gpt3__blog-container_article">
+  useEffect(() => {
+    console.log(d)
+  }, [])
+
+  return <div className="gpt3__blog-container_article">
     <div className="gpt3__blog-container_article-image">
       <img src={imgUrl} alt="blog_image" />
     </div>
@@ -11,7 +15,7 @@ const Article = ({ imgUrl, date, text, post, price, description }) => (
       <div>
         <p>{date}</p>
         <h3>{text}</h3>
-        <p>{description}</p>
+        <p>{d}</p>
         <h2
           style={{
             fontFamily: "var(--font-family);",
@@ -23,6 +27,6 @@ const Article = ({ imgUrl, date, text, post, price, description }) => (
 
     </div>
   </div>
-);
+};
 
 export default Article;
